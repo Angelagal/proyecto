@@ -261,20 +261,14 @@
                           <#if extInfo?default("")=="T">
                             <td style="font-size: 14px;">${uiLabelMap.PartyAreaCode}</td>
                           </#if>
-                          <#if inventoryItemId?default("") !="">
-                            <td style="font-size: 14px;">${uiLabelMap.ProductInventoryItemId}</td>
-                          </#if>
+                         
                           <#if serialNumber?default("") !="">
                             <td style="font-size: 14px;">${uiLabelMap.ProductSerialNumber}</td>
                           </#if>
                           <#if softIdentifier?default("") !="">
                             <td style="font-size: 14px;">${uiLabelMap.ProductSoftIdentifier}</td>
-                          </#if>
-                          <td style="font-size: 14px;">${uiLabelMap.PartyRelatedCompany}</td>
-                          <td style="font-size: 14px;">${uiLabelMap.PartyType}</td>
+                        </#if>
                           <td style="font-size: 14px;">${uiLabelMap.PartyMainRole}</td>
-                          <td>&nbsp;</td>
-                        </tr>
                         <#assign alt_row=false>
                           <#assign rowCount=0>
                             <#list partyList as partyRow>
@@ -294,11 +288,9 @@
                                   <#assign userLogin=userLogins.get(0)>
                                     ${userLogin.userLoginId}
                               </#if>
-                              <#else>
-                                (${uiLabelMap.CommonNone})
                             </#if>
                       </#if>
-                    </td>
+                    </td><!--Genera-->
                     <td>
                       <#if partyRow.getModelEntity().isField("lastName") && lastName?has_content>
                         ${partyRow.lastName}<#if partyRow.firstName?has_content>, ${partyRow.firstName}</#if>
@@ -313,49 +305,7 @@
                               </#if>
                       </#if>
                     </td>
-                    <#if extInfo?default("")=="T">
-                      <td>${partyRow.areaCode?if_exists}</td>
-                    </#if>
-                    <#if extInfo?default("")=="P">
-                      <td>${partyRow.city?if_exists}, ${partyRow.stateProvinceGeoId?if_exists}</td>
-                    </#if>
-                    <#if extInfo?default("")=="P">
-                      <td>${partyRow.postalCode?if_exists}</td>
-                    </#if>
-                    <#if inventoryItemId?default("") !="">
-                      <td>${partyRow.inventoryItemId?if_exists}</td>
-                    </#if>
-                    <#if serialNumber?default("") !="">
-                      <td>${partyRow.serialNumber?if_exists}</td>
-                    </#if>
-                    <#if softIdentifier?default("") !="">
-                      <td>${partyRow.softIdentifier?if_exists}</td>
-                    </#if>
-                    <#if partyType?exists>
-                      <td>
-                        <#if partyType.partyTypeId?has_content && partyType.partyTypeId=="PERSON">
-                          <#assign partyRelateCom=delegator.findByAnd("PartyRelationship", {"partyIdTo", partyRow.partyId,"roleTypeIdFrom","ACCOUNT","roleTypeIdTo","CONTACT"})>
-                            <#if partyRelateCom?has_content>
-                              <#list partyRelateCom as partyRelationship>
-                                <#if partyRelationship.partyIdFrom?has_content>
-                                  <#assign companyName=Static["org.ofbiz.party.party.PartyHelper"].getPartyName(delegator, partyRelationship.partyIdFrom, true)>
-                                    ${companyName?if_exists}
-                                </#if>
-                              </#list>
-                            </#if>
-                        </#if>
-                      </td>
-                      <td>
-                        <#if partyType.description?exists>${partyType.get("description", locale)}<#else>???</#if>
-                      </td>
-                      <#else>
-                        <td></td>
-                        <td></td>
-                    </#if>
-                    <td>
-                      <#assign mainRole=dispatcher.runSync("getPartyMainRole", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", partyRow.partyId, "userLogin" , userLogin)) />
-                      ${mainRole.description?if_exists}
-                    </td>
+                   
                     <td class="button-col align-float">
                       <#if partyRow.containsKey("userLoginId")>
                        <a href="#" data-partyId="${partyRow.partyId}" onclick="inhabilitarUsuario(event);">Inhabilitar</a>
