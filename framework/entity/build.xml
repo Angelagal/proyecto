@@ -18,7 +18,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 <!-- This file has been modified by Open Source Strategies, Inc. -->
-
 <project name="OFBiz - Entity" default="jar" basedir=".">
     <import file="../../common.xml"/>
 
