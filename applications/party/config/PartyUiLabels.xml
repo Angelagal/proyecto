@@ -3848,7 +3848,7 @@
     <property key="PartyCompanyName">
         <value xml:lang="de">OFBiz: Akteur Manager</value>
         <value xml:lang="en">OFBiz: Party Manager</value>
-        <value xml:lang="es">Administrador de participantes</value>
+        <value xml:lang="es">icipantes</value>
         <value xml:lang="fr">OFBiz : Gestionnaire d'acteur</value>
         <value xml:lang="hi_IN">OFBiz: पार्टी प्रबंधक</value>
         <value xml:lang="it">OFBiz: Gestione soggetti</value>
@@ -6678,7 +6678,7 @@
     </property>
     <property key="PartyMainRole">
         <value xml:lang="en">Main Role</value>
-		<value xml:lang="es">Rol principal</value>
+		<value xml:lang="es"></value>
         <value xml:lang="fr">Rôle principal</value>
         <value xml:lang="it">Ruolo principale</value>
         <value xml:lang="nl">Hoofdrol</value>
@@ -6687,7 +6687,7 @@
     <property key="PartyManager">
         <value xml:lang="de">Akteur Manager Anwendung</value>
         <value xml:lang="en">Party Manager</value>
-        <value xml:lang="es">Administrador de participantes</value>
+        <value xml:lang="es">icipantes</value>
         <value xml:lang="fr">Application de gestion des acteurs</value>
         <value xml:lang="hi_IN">पार्टी प्रबंधक अनुप्रयोग</value>
         <value xml:lang="it">Gestione soggetti</value>
