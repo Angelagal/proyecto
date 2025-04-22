@@ -17,7 +17,6 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-
 <project name="OFBiz Main Build" default="build" basedir=".">
     <import file="macros.xml"/>
     <property file="build.properties" />  
