@@ -110,7 +110,6 @@ under the License.
    </jar>
   </sequential>
  </macrodef>
-
  <macrodef name="test-jar">
   <attribute name="jarfile" default="${build.dir}/lib/${name}-test.jar"/>
   <element name="test-selector" optional="true"/>
