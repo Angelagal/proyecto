@@ -1830,7 +1830,14 @@ under the License.
         <response name="success" type="view" value="ListChecksToSend"/>
         <response name="error" type="view" value="ListChecksToSend"/>
     </request-map>
+    <!--Activacion css -->
+    <request-map uri="static/cssAn/showvisits.css">
+    <response type="none"/>
+</request-map>
 
+<request-map uri="static/JSAn/showvisits.js">
+    <response type="none"/>
+</request-map>
     <!-- Fin Account -->
     <request-map uri="FindFinAccount">
         <security https="true" auth="true"/>

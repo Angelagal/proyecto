@@ -20,10 +20,9 @@ under the License.
 <#-- This file has been modified by Open Source Strategies, Inc. -->
 <div class="screenlet">
 <!-- CSS desde static -->
-<link rel="stylesheet" type="text/css" href="/partymgr/static/cssAn/showvisti.css">
 
-<!-- JS desde static -->
-<script type="text/javascript" src="/partymgr/static/JSAn/showvisits.js"></script>
+<link rel="stylesheet" type="text/css" href="/partymgr/static/cssAn/showvisits.css">
+
   <#if partyId?exists>
     <#assign title = uiLabelMap.PartyParty>
   <#else>
@@ -104,3 +103,4 @@ under the License.
       <br class="clear"/>
   </div>
 </div>
+<script src="/partymgr/static/JSAn/showvisits.js"></script>
