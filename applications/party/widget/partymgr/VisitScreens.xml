@@ -28,7 +28,6 @@ under the License.
                 <set field="titleProperty" value="PageTitleVisitList"/>
                 <set field="headerItem" value="visits"/>
                 <set field="tabButtonItem" value="showvisits"/>
-
                 <script location="component://party/webapp/partymgr/WEB-INF/actions/visit/ShowVisits.groovy"/>
             </actions>
             <widgets>

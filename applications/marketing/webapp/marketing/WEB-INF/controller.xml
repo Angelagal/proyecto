@@ -54,7 +54,6 @@ under the License.
         <response name="success" type="view" value="main"/>
         <response name="error" type="view" value="error"/>
     </request-map>
-
     <!-- =========== DataSource =========== -->
     <request-map uri="FindDataSource"><security https="true" auth="true"/><response name="success" type="view" value="FindDataSource"/></request-map>
     <request-map uri="EditDataSource"><security https="true" auth="true"/><response name="success" type="view" value="EditDataSource"/></request-map>

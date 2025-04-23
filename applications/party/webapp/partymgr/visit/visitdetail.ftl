@@ -17,9 +17,10 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#-- This file has been modified by Open Source Strategies, Inc. -->
-
 <!-- begin visitdetail.ftl -->
 <div class="screenlet">
+<link rel="stylesheet" href="/partymgr/static/cssAn/showvisits.css">
+<script src="/partymgr/static/JSAn/showvisits.js"></script>
   <div class="screenlet-title-bar">
     <ul>
       <li class="h3">${uiLabelMap.PartyVisitDetail}</li>

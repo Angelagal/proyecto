@@ -16,55 +16,14 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
- <#-- Codigo CSS para estilo de tabla-->
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
 
-  th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-    text-align: center;
-  }
-
-  th {
-    background-color: #004080;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  tr:hover {
-    background-color: #cce7ff;
-    transition: 0.3s;
-  }
-  .button-col a {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-
-  .button-col a:hover {
-    background-color: #0056b3;
-  }
-</style>
- <#-- -->
-</style>
 <#-- This file has been modified by Open Source Strategies, Inc. -->
 <div class="screenlet">
+<!-- CSS desde static -->
+<link rel="stylesheet" type="text/css" href="/partymgr/static/cssAn/showvisti.css">
+
+<!-- JS desde static -->
+<script type="text/javascript" src="/partymgr/static/JSAn/showvisits.js"></script>
   <#if partyId?exists>
     <#assign title = uiLabelMap.PartyParty>
   <#else>
@@ -98,7 +57,8 @@ under the License.
         </div>
         <br class="clear"/>
       <br />
-      <table class="basic-table hover-bar" cellspacing="0">
+      <table class="table table-striped table-hover table-bordered custom-table" cellspacing="0">
+       <thead>
         <tr class="header-row">
           <td><a href="<@ofbizUrl>showvisits?sort=visitId&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.PartyVisitId}</a></td>
           <td><a href="<@ofbizUrl>showvisits?sort=visitorId&amp;showAll=${showAll}<#if visitorId?has_content>&amp;visitorId=${visitorId}</#if></@ofbizUrl>">${uiLabelMap.PartyVisitorId}</a></td>
@@ -110,6 +70,7 @@ under the License.
           <td><a href="<@ofbizUrl>showvisits?sort=fromDate&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.CommonFromDate}</a></td>
           <td><a href="<@ofbizUrl>showvisits?sort=thruDate&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.CommonThruDate}</a></td>
         </tr>
+        </thead>
         <#assign alt_row = false>
         <#list visitList as visitObj>
           <tr<#if alt_row> class="alternate-row"</#if>>
