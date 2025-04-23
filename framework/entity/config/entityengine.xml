@@ -467,7 +467,7 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext"/>
         <inline-jdbc
                 jdbc-driver="org.postgresql.Driver"
-                jdbc-uri="jdbc:postgresql://127.0.0.1:5432/contableA1"
+                jdbc-uri="jdbc:postgresql://127.0.0.1:5432/contable"
                 jdbc-username="postgres"
                 jdbc-password="1234"
                 isolation-level="ReadCommitted"
