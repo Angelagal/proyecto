@@ -109,19 +109,7 @@
                         <#else>
                           <li class="expanded"><a href="<@ofbizUrl>findparty?hideFields=Y${paramList}</@ofbizUrl>" title="${uiLabelMap.CommonHideFields}">&nbsp;</a></li>
                       </#if>
-                      <#if (partyListSize> 0)>
-                        <#if (partyListSize> highIndex)>
-                          <li><a class="nav-next" href="<@ofbizUrl>findparty?VIEW_SIZE=${viewSize}&amp;VIEW_INDEX=${viewIndex+1}&amp;hideFields=${hideFields}${paramList}</@ofbizUrl>">${uiLabelMap.CommonNext}</a></li>
-                          <#else>
-                            <li class="disabled">${uiLabelMap.CommonNext}</li>
-                        </#if>
-                        <li>${lowIndex} - ${highIndex} ${uiLabelMap.CommonOf} ${partyListSize}</li>
-                        <#if (viewIndex> 0)>
-                          <li><a class="nav-previous" href="<@ofbizUrl>findparty?VIEW_SIZE=${viewSize}&amp;VIEW_INDEX=${viewIndex-1}&amp;hideFields=${hideFields}${paramList}</@ofbizUrl>">${uiLabelMap.CommonPrevious}</a></li>
-                          <#else>
-                            <li class="disabled">${uiLabelMap.CommonPrevious}</li>
-                        </#if>
-                      </#if>
+                      
                     </ul>
                     <br class="clear" />
                   </#if>
@@ -311,7 +299,6 @@
                        <a href="#" data-partyId="${partyRow.partyId}" onclick="inhabilitarUsuario(event);">Inhabilitar</a>
                       <#else>
                         <#assign userLogins=partyRow.getRelated("UserLogin")>
-
                         <#if (userLogins.size()> 0)>
                           <#if userLogins.get(0).enabled?exists && userLogins.get(0).enabled == "N">
                             <a href="#" data-partyId="${partyRow.partyId}" class="button_disabled" onclick="inhabilitarUsuario(event, false)">Inhabilitado</a>

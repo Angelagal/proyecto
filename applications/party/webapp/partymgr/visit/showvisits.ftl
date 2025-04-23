@@ -16,6 +16,53 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
+ <#-- Codigo CSS para estilo de tabla-->
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    text-align: center;
+  }
+
+  th {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #cce7ff;
+    transition: 0.3s;
+  }
+  .button-col a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .button-col a:hover {
+    background-color: #0056b3;
+  }
+</style>
+ <#-- -->
+</style>
 <#-- This file has been modified by Open Source Strategies, Inc. -->
 <div class="screenlet">
   <#if partyId?exists>
