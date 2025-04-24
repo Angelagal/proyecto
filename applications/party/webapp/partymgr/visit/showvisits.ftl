@@ -16,8 +16,13 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
+
 <#-- This file has been modified by Open Source Strategies, Inc. -->
 <div class="screenlet">
+<!-- CSS desde static -->
+
+<link rel="stylesheet" type="text/css" href="/partymgr/static/cssAn/showvisits.css">
+
   <#if partyId?exists>
     <#assign title = uiLabelMap.PartyParty>
   <#else>
@@ -51,7 +56,8 @@ under the License.
         </div>
         <br class="clear"/>
       <br />
-      <table class="basic-table hover-bar" cellspacing="0">
+      <table class="table table-striped table-hover table-bordered custom-table" cellspacing="0">
+       <thead>
         <tr class="header-row">
           <td><a href="<@ofbizUrl>showvisits?sort=visitId&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.PartyVisitId}</a></td>
           <td><a href="<@ofbizUrl>showvisits?sort=visitorId&amp;showAll=${showAll}<#if visitorId?has_content>&amp;visitorId=${visitorId}</#if></@ofbizUrl>">${uiLabelMap.PartyVisitorId}</a></td>
@@ -63,6 +69,7 @@ under the License.
           <td><a href="<@ofbizUrl>showvisits?sort=fromDate&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.CommonFromDate}</a></td>
           <td><a href="<@ofbizUrl>showvisits?sort=thruDate&amp;showAll=${showAll}<#if partyId?has_content>&amp;partyId=${partyId}</#if></@ofbizUrl>">${uiLabelMap.CommonThruDate}</a></td>
         </tr>
+        </thead>
         <#assign alt_row = false>
         <#list visitList as visitObj>
           <tr<#if alt_row> class="alternate-row"</#if>>
@@ -96,3 +103,4 @@ under the License.
       <br class="clear"/>
   </div>
 </div>
+<script src="/partymgr/static/JSAn/showvisits.js"></script>

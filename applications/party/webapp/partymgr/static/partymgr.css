@@ -21,21 +21,28 @@
 /* This CSS file is used for the Party Manager component. */
 
 #mech-purpose-types .basic-table {
-width: auto;
-margin-bottom: 1em;
+  width: auto;
+  margin-bottom: 1em;
 }
 
 .profile-left {
-float: left;
-width: 47%;
+  float: left;
+  width: 47%;
 }
 
 .profile-right {
-float: right;
-width: 47%;
+  float: right;
+  width: 47%;
 }
 
 .profile-bottom {
-float: left;
-width: 100%;
+  float: left;
+  width: 100%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
